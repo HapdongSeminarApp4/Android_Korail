@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
     id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.20'
+    id "org.jlleitschuh.gradle.ktlint" version "10.3.0"
 }
 
 android {
@@ -82,4 +83,16 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+}
+
+ktlint {
+    android = true
+    coloredOutput = true
+    verbose = true
+    outputToConsole = true
+    disabledRules = ["max-line-length", "no-wildcard-imports", "import-ordering"]
+    reporters {
+        reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.PLAIN)
+        reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.CHECKSTYLE)
+    }
 }
