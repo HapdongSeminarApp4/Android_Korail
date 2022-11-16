@@ -4,6 +4,7 @@
     package="com.example.korail_aos">
 
     <application
+        android:name=".KorailApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
