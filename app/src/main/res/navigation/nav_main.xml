@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/trainFragment">
+    <fragment
+        android:id="@+id/trainFragment"
+        android:name="com.example.korail_aos.presentation.train.TrainFragment"
+        android:label="FragmentTrain"
+        tools:layout="@layout/fragment_train" />
+    <fragment
+        android:id="@+id/discountFragment"
+        android:name="com.example.korail_aos.presentation.discount.DiscountFragment"
+        android:label="FragmentDiscount"
+        tools:layout="@layout/fragment_discount" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.example.korail_aos.presentation.product.ProductFragment"
+        android:label="FragmentProduct"
+        tools:layout="@layout/fragment_product" />
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.example.korail_aos.presentation.ticket.TicketFragment"
+        android:label="FragmentTicket"
+        tools:layout="@layout/fragment_ticket" />
+</navigation>
