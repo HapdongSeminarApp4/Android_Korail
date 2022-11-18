@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Korail-AOS</string>
+    <string name="bottom_train">승차권예매</string>
+    <string name="bottom_discount">할인⋅정기권</string>
+    <string name="bottom_product">관광상품</string>
+    <string name="bottom_ticket">승차권확인</string>
 </resources>

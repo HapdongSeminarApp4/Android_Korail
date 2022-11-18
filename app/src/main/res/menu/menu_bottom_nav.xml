@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/trainFragment"
+        android:icon="@drawable/sel_bottom_train"
+        android:title="@string/bottom_train" />
+
+    <item
+        android:id="@+id/discountFragment"
+        android:icon="@drawable/sel_bottom_discount"
+        android:title="@string/bottom_discount" />
+
+    <item
+        android:id="@+id/productFragment"
+        android:icon="@drawable/sel_bottom_product"
+        android:title="@string/bottom_product" />
+
+    <item
+        android:id="@+id/ticketFragment"
+        android:icon="@drawable/sel_bottom_ticket"
+        android:title="@string/bottom_ticket" />
+
+</menu>
