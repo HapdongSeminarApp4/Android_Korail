@@ -10,8 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:background="@color/gray_04">
+        android:background="@color/gray_04"
+        tools:context=".MainActivity">
         <!--        질문-->
         <!--        1. 피그마에 다 px로 되어있는데 dp라고 봐야 하는 건가-->
         <!--        2. 마진들이 소수점으로 되어 있는 것이 있는데 반올림 해야 하는가-->
@@ -21,8 +21,8 @@
         <!--        6. 벡터 xml..-->
         <!--        7. 버튼 안에 이미지 넣기-->
         <!--        8. 왕복 버튼 이미지 추출-->
-        <LinearLayout
-            android:id="@+id/layout_main_title"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_main"
             android:layout_width="match_parent"
             android:layout_height="108dp"
             android:background="@color/blue"
@@ -43,21 +43,24 @@
                 android:layout_marginTop="58dp"
                 android:layout_marginStart="105dp"
                 android:src="@drawable/ic_main_bar" />
-        </LinearLayout>
-        <!--linearlayout 높이 수정하기-->
+        </androidx.appcompat.widget.Toolbar>
+
         <LinearLayout
+            app:layout_constraintTop_toBottomOf="@id/tb_main"
             android:id="@+id/layout_main_semi_title"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/layout_main_title">
+            android:background="@color/white">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/pretendard_semi_bold"
                 android:text="내일로 두번째 이야기" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,231 +68,256 @@
                 android:layout_marginTop="18dp"
                 android:src="@drawable/ic_main_unfold" />
         </LinearLayout>
+
         <ImageView
             android:id="@+id/iv_main_line1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_main_line"
-            app:layout_constraintTop_toBottomOf="@id/layout_main_semi_title"/>
+            app:layout_constraintTop_toBottomOf="@id/layout_main_semi_title" />
+
         <LinearLayout
-        android:id="@+id/layout_main_route"
-        android:layout_width="match_parent"
-        android:layout_height="127dp"
-        android:orientation="vertical"
+            android:id="@+id/layout_main_route"
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
             android:background="@color/gray_04"
-        app:layout_constraintTop_toBottomOf="@id/iv_main_line1">
-         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="80dp"
-            android:text="출발"
-            android:fontFamily="@font/pretendard_semi_bold"/>
-            <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="84dp"
-            android:src="@drawable/ic_main_mutal"/>
-            <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="84dp"
-            android:text="도착"
-            android:fontFamily="@font/pretendard_semi_bold"/>
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_line1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/pretendard_semi_bold"
+                    android:text="출발" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_main_mutal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/pretendard_semi_bold"
+                    android:text="도착" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="서울"
+                    android:textColor="@color/blue"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/ic_main_right_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    android:text="부산"
+                    android:textColor="@color/blue"
+                    android:textSize="24dp" />
+            </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="21dp"
-                android:layout_marginStart="70dp"
-                android:text="서울"
-                android:textSize="24dp"
-                android:textColor="@color/blue"
-                android:fontFamily="@font/pretendard_bold"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_marginStart="84dp"
-                android:src="@drawable/ic_main_right_arrow"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="21dp"
-                android:layout_marginStart="84dp"
-                android:text="부산"
-                android:textSize="24dp"
-                android:textColor="@color/blue"
-                android:fontFamily="@font/pretendard_bold"/>
-        </LinearLayout>
-       </LinearLayout>
+
         <ImageView
             android:id="@+id/iv_main_line2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_main_line"
-            app:layout_constraintTop_toBottomOf="@id/layout_main_route"/>
-<!--        왕복 버튼 이미지 넣기-->
+            app:layout_constraintTop_toBottomOf="@id/layout_main_route" />
+        <!--        왕복 버튼 이미지 넣기-->
         <LinearLayout
             android:id="@+id/layout_main_method"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/iv_main_line2">
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/gray_04"
-                android:text="편도"
-                android:fontFamily="@font/pretendard_bold" />
+                android:fontFamily="@font/pretendard_bold"
+                android:text="편도" />
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/white"
-                android:text="왕복"
-                android:fontFamily="@font/pretendard_semi_bold"/>
+                android:fontFamily="@font/pretendard_semi_bold"
+                android:text="왕복" />
         </LinearLayout>
+
         <ImageView
             android:id="@+id/iv_main_line3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_main_line"
-            app:layout_constraintTop_toBottomOf="@id/layout_main_method"/>
+            app:layout_constraintTop_toBottomOf="@id/layout_main_method" />
+
         <LinearLayout
             android:id="@+id/layout_main_period"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:orientation="horizontal"
             android:background="@color/gray_04"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/iv_main_line3">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="23dp"
-                android:src="@drawable/ic_main_period"/>
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_main_period" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_semi_bold"
                 android:text="사용기간"
-                android:textSize="14dp"
-                android:fontFamily="@font/pretendard_semi_bold"/>
+                android:textSize="14dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="100dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_bold"
                 android:text="2022년 11월 5일 (토), 7일 사용"
-                android:textSize="14dp"
-                android:fontFamily="@font/pretendard_bold"/>
+                android:textSize="14dp" />
         </LinearLayout>
+
         <ImageView
             android:id="@+id/iv_main_line4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_main_line"
-            app:layout_constraintTop_toBottomOf="@id/layout_main_period"/>
+            app:layout_constraintTop_toBottomOf="@id/layout_main_period" />
+
         <LinearLayout
             android:id="@+id/layout_main_passenger"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:orientation="horizontal"
             android:background="@color/gray_04"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/iv_main_line4">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="23dp"
-                android:src="@drawable/ic_main_passenger"/>
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_main_passenger" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_semi_bold"
                 android:text="승객 연령 및 좌석수"
-                android:textSize="14dp"
-                android:fontFamily="@font/pretendard_semi_bold"/>
+                android:textSize="14dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="176dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_bold"
                 android:text="어른 1명"
-                android:textSize="14dp"
-                android:fontFamily="@font/pretendard_bold"/>
+                android:textSize="14dp" />
         </LinearLayout>
-    <ImageView
-        android:id="@+id/iv_main_line5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_main_line"
-        app:layout_constraintTop_toBottomOf="@id/layout_main_passenger"/>
+
+        <ImageView
+            android:id="@+id/iv_main_line5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_main_line"
+            app:layout_constraintTop_toBottomOf="@id/layout_main_passenger" />
+
         <LinearLayout
             android:id="@+id/layout_main_pay"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:orientation="horizontal"
             android:background="@color/gray_04"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/iv_main_line5">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginStart="23dp"
-                android:src="@drawable/ic_main_pay"/>
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_main_pay" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_semi_bold"
                 android:text="결제 수단"
-                android:textSize="14dp"
-                android:fontFamily="@font/pretendard_semi_bold"/>
+                android:textSize="14dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:layout_marginStart="232dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_bold"
                 android:text="신한카드"
-                android:textSize="14dp"
-                android:fontFamily="@font/pretendard_bold"/>
+                android:textSize="14dp" />
         </LinearLayout>
+
         <ImageView
             android:id="@+id/iv_main_line6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_main_line"
-            app:layout_constraintTop_toBottomOf="@id/layout_main_pay"/>
-        <Button
+            app:layout_constraintTop_toBottomOf="@id/layout_main_pay" />
+
+        <ImageView
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/light_blue"
-            android:text="예매하기"
-            android:textSize="22dp"
-            android:textColor="@color/blue"
             android:fontFamily="@font/pretendard_bold"
-            app:layout_constraintBottom_toTopOf="@id/bot_nav_main"/>
-
-
-
-
-
-
+            android:text="예매하기"
+            android:textColor="@color/blue"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toTopOf="@id/bot_nav_main" />
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fc_main"
@@ -312,6 +340,5 @@
             app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:menu="@menu/menu_bottom_nav" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
