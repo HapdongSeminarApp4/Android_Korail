@@ -5,4 +5,11 @@
     <string name="bottom_product">관광상품</string>
     <string name="bottom_ticket">승차권확인</string>
     <string name="information_tool_bar_title">내일로 두번째 이야기</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="information_agree">동의 안내</string>
+    <string name="information_caution">타인 양도 불가</string>
+    <string name="information_first_content">내일로 두번째 이야기 패스의 기명인만\n사용가능하며 타인 양도가 절대 불가합니다.</string>
+    <string name="information_first_description">(부정사용 시 최대 30배 부가운임 징수)</string>
+    <string name="information_first_page">1/5</string>
 </resources>
