@@ -19,7 +19,7 @@
     <string name="information_third_des">일반 예매에서 남아있더라도\n <font color="#0B4199">내일로 패스</font>로 이용할 수 있는\n 좌석 및 자유석은 <font color="#0B4199">별도 범위 적용</font>을 받으므로,\n 원하는 요일이나 시간대의 열차 이용이\n 불가할 수 있습니다.</string>
     <string name="information_third_caution">별도 범위 지정</string>
     <string name="information_fourth">적립대상 제외</string>
-    <string name="information_fourth_des">열차의 지연, 운행중지, 도중 여행중지 등에\n따른 <font color="#0B4199">보상 및 마일리지 적립대상에서 제외</font>됩니다.</string>
+    <string name="information_fourth_des">열차의 지연, 운행중지, 도중 여행중지 등에\n따른 <font color="#0B4199">보상 및 마일리지\n 적립대상에서 제외</font>됩니다.</string>
     <string name="information_five_des">내국인만 구매 가능하며,\n <font color="#0B4199">권종별 연중 최대 4회까지만 이용이 가능</font>합니다.</string>
     <string name="information_five_agree">위 주의사항에 동의하십니까?</string>
     <string name="information_five_caution">이용 횟수 제한</string>
