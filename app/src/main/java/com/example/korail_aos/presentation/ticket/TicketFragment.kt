@@ -5,15 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.korail_aos.R
 import com.example.korail_aos.databinding.FragmentTicketBinding
-import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class TicketFragment : Fragment() {
     private var _binding: FragmentTicketBinding? = null
     private val binding: FragmentTicketBinding
         get() = requireNotNull(_binding) { "FragmentTicketBinding" }
-    private lateinit var tabLayout: TabLayout
+    private val information =
+//        arrayListOf(getString(R.string.ticket_verify), getString(R.string.ticket_pass) (???)
+        arrayListOf("승차권", "정기권⋅패스")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,29 +26,22 @@ class TicketFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        tabLayout = binding.tlTicketTablayout
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.ticket_verify))
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.ticket_pass))
-
-        binding.tlTicketTablayout.addOnTabSelectedListener(object :
-                TabLayout.OnTabSelectedListener {
-                // 탭의 상태가 선택으로 변경
-                override fun onTabSelected(tab: TabLayout.Tab?) {
-                }
-
-                // 탭의 상태가 선택되지 않음으로 변경
-                override fun onTabUnselected(tab: TabLayout.Tab?) {
-                }
-
-                // 이미 선택된 탭이 다시 선택됨
-                override fun onTabReselected(tab: TabLayout.Tab?) {
-                    when (tab!!.position) {
-                        0 -> TicketVerifyFragment()
-                        else -> TicketPassFragment()
-                    }
-                }
-            })
+        setViewPager()
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    private fun setViewPager() {
+        val adapter = TicketVPAdapter(this)
+        binding.vpTicketVerifyViewpager.adapter = adapter
+        binding.vpTicketVerifyViewpager.run {
+            isUserInputEnabled = false
+        }
+        TabLayoutMediator(
+            binding.tlTicketTablayout,
+            binding.vpTicketVerifyViewpager
+        ) { tab, position ->
+            tab.text = information[position]
+        }.attach()
     }
 
     override fun onDestroyView() {
