@@ -21,45 +21,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="@string/information_caution"
+        android:text="@string/information_fourth"
         android:textAppearance="@style/H3"
         android:textColor="@color/blue"
         app:layout_constraintStart_toStartOf="@+id/tv_agree_information"
         app:layout_constraintTop_toBottomOf="@+id/tv_agree_information" />
 
     <ImageView
-        android:id="@+id/iv_first_content"
+        android:id="@+id/iv_fourth_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:src="@drawable/ic_information_travel"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_information_explain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_caution_information" />
 
     <TextView
-        android:id="@+id/tv_first_content"
+        android:id="@+id/tv_fourth_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
-        android:text="@string/information_first_content"
+        android:layout_marginTop="92dp"
+        android:text="@string/information_fourth_des"
         android:textAlignment="center"
         android:textAppearance="@style/B6"
         android:textColor="@color/gray_11"
-        app:layout_constraintEnd_toEndOf="@+id/iv_first_content"
-        app:layout_constraintStart_toStartOf="@+id/iv_first_content"
-        app:layout_constraintTop_toBottomOf="@+id/iv_first_content" />
-
-    <TextView
-        android:id="@+id/tv_first_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/information_first_description"
-        android:textAppearance="@style/B8"
-        android:textColor="@color/gray_09"
-        app:layout_constraintEnd_toEndOf="@+id/tv_first_content"
-        app:layout_constraintStart_toStartOf="@+id/tv_first_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_first_content" />
+        app:layout_constraintEnd_toEndOf="@+id/iv_fourth_content"
+        app:layout_constraintStart_toStartOf="@+id/iv_fourth_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_fourth_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_agree_information" />
 
     <ImageView
-        android:id="@+id/iv_third_content"
+        android:id="@+id/iv_second_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
@@ -46,8 +46,8 @@
         android:text="@string/information_ktx"
         android:textAppearance="@style/H4"
         android:textColor="@color/blue"
-        app:layout_constraintStart_toStartOf="@+id/iv_third_content"
-        app:layout_constraintTop_toBottomOf="@+id/iv_third_content" />
+        app:layout_constraintStart_toStartOf="@+id/iv_second_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_second_content" />
 
     <TextView
         android:id="@+id/tv_second_ktx_content"
