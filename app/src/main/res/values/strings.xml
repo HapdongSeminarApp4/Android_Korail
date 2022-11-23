@@ -20,4 +20,7 @@
     <string name="information_third_caution">별도 범위 지정</string>
     <string name="information_fourth">적립대상 제외</string>
     <string name="information_fourth_des">열차의 지연, 운행중지, 도중 여행중지 등에\n따른 보상 및 마일리지 적립대상에서 제외됩니다.</string>
+    <string name="information_five_des">내국인만 구매 가능하며,\n 권종별 연중 최대 4회까지만 이용이 가능합니다.</string>
+    <string name="information_five_agree">위 주의사항에 동의하십니까?</string>
+    <string name="information_five_caution">이용 횟수 제한</string>
 </resources>
