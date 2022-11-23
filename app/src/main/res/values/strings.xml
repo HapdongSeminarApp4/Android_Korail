@@ -4,4 +4,16 @@
     <string name="bottom_discount">할인⋅정기권</string>
     <string name="bottom_product">관광상품</string>
     <string name="bottom_ticket">승차권확인</string>
+
+    <!--  ticket  -->
+    <string name="ticket_title">승차권 확인</string>
+    <string name="ticket_verify">승차권</string>
+    <string name="ticket_pass">정기권⋅패스</string>
+    <string name="ticket_verify_title">내일로 2.0 연속 7일권</string>
+    <string name="ticket_verify_from">부터</string>
+    <string name="ticket_verify_to">까지</string>
+    <string name="ticket_verify_user_info">탑승자 정보</string>
+    <string name="ticket_verify_ticket_num">승차권 번호</string>
+    <string name="ticket_verify_warning">*캡쳐한 승차권은 부가운임 대상입니다.</string>
+
 </resources>
