@@ -23,4 +23,6 @@
     <string name="information_five_des">내국인만 구매 가능하며,\n 권종별 연중 최대 4회까지만 이용이 가능합니다.</string>
     <string name="information_five_agree">위 주의사항에 동의하십니까?</string>
     <string name="information_five_caution">이용 횟수 제한</string>
+    <string name="information_agree_btn">동의</string>
+    <string name="information_disagree_btn">비동의</string>
 </resources>
