@@ -3,15 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".presentation.information.InformationFirstFragment">
-
-    <include
-        android:id="@+id/include_first_tool_bar"
-        layout="@layout/include_information_tool_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_agree_information"
@@ -23,7 +16,7 @@
         android:textAppearance="@style/H4"
         android:textColor="@color/blue"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include_first_tool_bar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_caution_information"
@@ -51,8 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
-        android:textAlignment="center"
         android:text="@string/information_first_content"
+        android:textAlignment="center"
         android:textAppearance="@style/B6"
         android:textColor="@color/gray_11"
         app:layout_constraintEnd_toEndOf="@+id/iv_first_content"
@@ -70,31 +63,5 @@
         app:layout_constraintEnd_toEndOf="@+id/tv_first_content"
         app:layout_constraintStart_toStartOf="@+id/tv_first_content"
         app:layout_constraintTop_toBottomOf="@+id/tv_first_content" />
-
-    <TextView
-        android:id="@+id/tv_first_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="69dp"
-        android:text="@string/information_first_page"
-        android:textAppearance="@style/B6"
-        android:textColor="@color/blue"
-        app:layout_constraintEnd_toEndOf="@+id/tv_first_description"
-        app:layout_constraintStart_toStartOf="@+id/tv_first_description"
-        app:layout_constraintTop_toBottomOf="@+id/tv_first_description" />
-
-    <ImageButton
-        android:id="@+id/ib_first_right"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="25dp"
-        android:background="@drawable/shape_blue_fill_oval"
-        android:paddingStart="15dp"
-        android:paddingEnd="12dp"
-        android:scaleType="center"
-        android:src="@drawable/ic_information_right"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_first_page"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_first_page" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

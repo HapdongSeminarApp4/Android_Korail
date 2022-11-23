@@ -12,4 +12,9 @@
     <string name="information_first_content">내일로 두번째 이야기 패스의 기명인만\n사용가능하며 타인 양도가 절대 불가합니다.</string>
     <string name="information_first_description">(부정사용 시 최대 30배 부가운임 징수)</string>
     <string name="information_first_page">1/5</string>
+    <string name="information_second_caution">이용 가능 열차</string>
+    <string name="information_ktx">KTX</string>
+    <string name="information_ktx_des">KTX의 좌석 2회 ( 1일 1회, 총 2회)\n KTX의 입석(자유석) 이용 불가</string>
+    <string name="information_common">일반열차</string>
+    <string name="information_common_des">ITX-청춘, ITX-새마을, 새마을,\n무궁화, 누리로, 통근열차의 좌석 (1일 2회)\n일반열차 입석(자유석)</string>
 </resources>
