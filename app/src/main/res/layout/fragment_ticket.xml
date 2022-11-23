@@ -29,13 +29,13 @@
         app:tabIndicatorHeight="5dp"
         app:tabSelectedTextColor="@color/blue"
         app:tabTextAppearance="@style/H3"
-        app:tabTextColor="@color/gray_07"/>
-    
+        app:tabTextColor="@color/gray_07" />
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vp_ticket_verify_viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tl_ticket_tablayout"/>
+        app:layout_constraintTop_toBottomOf="@+id/tl_ticket_tablayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
