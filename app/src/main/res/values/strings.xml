@@ -4,7 +4,7 @@
     <string name="bottom_discount">할인⋅정기권</string>
     <string name="bottom_product">관광상품</string>
     <string name="bottom_ticket">승차권확인</string>
-    
+
     <string name="information_tool_bar_title">내일로 두번째 이야기</string>
     <string name="information_agree">동의 안내</string>
     <string name="information_caution">타인 양도 불가</string>
@@ -16,4 +16,6 @@
     <string name="information_ktx_des">KTX의 좌석 2회 ( 1일 1회, 총 2회)\n KTX의 입석(자유석) 이용 불가</string>
     <string name="information_common">일반열차</string>
     <string name="information_common_des">ITX-청춘, ITX-새마을, 새마을,\n무궁화, 누리로, 통근열차의 좌석 (1일 2회)\n일반열차 입석(자유석)</string>
+    <string name="information_third_des">일반 예매에서 남아있더라도\n 내일로 패스로 이용할 수 있는\n 좌석 및 자유석은 별도 범위 적용을 받으므로,\n 원하는 요일이나 시간대의 열차 이용이\n 불가할 수 있습니다.</string>
+    <string name="information_third_caution">별도 범위 지정</string>
 </resources>

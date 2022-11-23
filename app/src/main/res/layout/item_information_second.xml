@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".presentation.information.InformationSecondFragment">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/tv_agree_information"
@@ -30,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_agree_information" />
 
     <ImageView
-        android:id="@+id/iv_first_content"
+        android:id="@+id/iv_third_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
@@ -48,8 +46,8 @@
         android:text="@string/information_ktx"
         android:textAppearance="@style/H4"
         android:textColor="@color/blue"
-        app:layout_constraintStart_toStartOf="@+id/iv_first_content"
-        app:layout_constraintTop_toBottomOf="@+id/iv_first_content" />
+        app:layout_constraintStart_toStartOf="@+id/iv_third_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_third_content" />
 
     <TextView
         android:id="@+id/tv_second_ktx_content"
