@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.korail_aos.R
+import com.example.korail_aos.remote.MainServicePool
 
 class TicketFragment : Fragment() {
     override fun onCreateView(

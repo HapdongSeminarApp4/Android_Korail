@@ -6,7 +6,326 @@
     android:layout_height="match_parent"
     android:id="@+id/nav_main_drawer"
     tools:openDrawer="right"
+    android:background="@color/gray_04"
+    android:fitsSystemWindows="true"
     tools:context=".presentation.discount.DiscountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_04"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_main"
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+            android:background="@color/blue"
+            android:orientation="horizontal"
+            app:menu="@menu/menu_main_toolbar"
+            app:layout_constraintBottom_toTopOf="@+id/layout_main_semi_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="58dp"
+                android:layout_marginBottom="21dp"
+                android:fontFamily="@font/pretendard_semi_bold"
+                android:text="승차권 예매"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+<!--            <ImageButton-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="58dp"-->
+<!--                android:layout_marginStart="105dp"-->
+<!--                android:src="@drawable/ic_main_bar"/>-->
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/layout_main_semi_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tb_main">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/pretendard_semi_bold"
+                android:text="내일로 두번째 이야기" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="233dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ic_main_unfold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_main_line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_main_line"
+            app:layout_constraintTop_toBottomOf="@id/layout_main_semi_title" />
+
+        <LinearLayout
+            android:id="@+id/layout_main_route"
+            android:layout_width="match_parent"
+            android:layout_height="127dp"
+            android:background="@color/gray_04"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_line1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/pretendard_semi_bold"
+                    android:text="출발" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_main_mutal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/pretendard_semi_bold"
+                    android:text="도착" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    tools:text="서울"
+                    android:textColor="@color/blue"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/ic_main_right_arrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="84dp"
+                    android:layout_marginTop="21dp"
+                    android:fontFamily="@font/pretendard_bold"
+                    tools:text="부산"
+                    android:textColor="@color/blue"
+                    android:textSize="24dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_main_line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_main_line"
+            app:layout_constraintTop_toBottomOf="@id/layout_main_route" />
+        <LinearLayout
+            android:id="@+id/layout_main_method"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_line2">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingLeft="70dp"
+                android:drawablePadding="-70dp"
+                android:drawableStart="@drawable/ic_main_right_arrow"
+                android:background="@color/white"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="편도" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="70dp"
+                android:drawablePadding="-70dp"
+                android:drawableStart="@drawable/ic_main_shuffle"
+                android:background="@color/gray_04"
+                android:fontFamily="@font/pretendard_semi_bold"
+                android:text="왕복" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_main_line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_main_line"
+            app:layout_constraintTop_toBottomOf="@id/layout_main_method" />
+
+        <LinearLayout
+            android:id="@+id/layout_main_period"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/gray_04"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_line3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_main_period" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_semi_bold"
+                android:text="사용기간"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_bold"
+                tools:text="2022년 11월 5일 (토), 7일 사용"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_main_line4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_main_line"
+            app:layout_constraintTop_toBottomOf="@id/layout_main_period" />
+
+        <LinearLayout
+            android:id="@+id/layout_main_passenger"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/gray_04"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_line4">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_main_passenger" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_semi_bold"
+                android:text="승객 연령 및 좌석수"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="176dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="어른 1명"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_main_line5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_main_line"
+            app:layout_constraintTop_toBottomOf="@id/layout_main_passenger" />
+
+        <LinearLayout
+            android:id="@+id/layout_main_pay"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/gray_04"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_line5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_main_pay" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_semi_bold"
+                android:text="결제 수단"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="232dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/pretendard_bold"
+                android:text="신한카드"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_main_line6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_main_line"
+            app:layout_constraintTop_toBottomOf="@id/layout_main_pay" />
+
+        <ImageView
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/light_blue"
+            android:fontFamily="@font/pretendard_bold"
+            android:text="예매하기"
+            android:textColor="@color/blue"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_main_drawer_content"

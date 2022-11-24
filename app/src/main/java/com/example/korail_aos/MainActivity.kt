@@ -11,15 +11,10 @@ import com.example.korail_aos.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private DrawerLayout drawer;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         initBottomNavigationView()
-
-        Toolbar toolbar = findViewById(R.id.)
-        setSupportActionBar(toolbar);
-        drawer=findViewById(R.id.)
     }
 
     private fun initBottomNavigationView() {
