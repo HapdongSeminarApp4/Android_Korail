@@ -32,8 +32,8 @@ class TicketFragment : Fragment() {
 
     private fun setViewPager() {
         val adapter = TicketVPAdapter(this)
-        binding.vpTicketVerifyViewpager.adapter = adapter
-        binding.vpTicketVerifyViewpager.run {
+        binding.vpTicketVerifyViewpager.apply{
+            adapter = adapter
             isUserInputEnabled = false
         }
         TabLayoutMediator(
