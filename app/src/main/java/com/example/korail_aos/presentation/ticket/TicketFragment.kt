@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.korail_aos.R
 import com.example.korail_aos.databinding.FragmentTicketBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -12,9 +13,8 @@ class TicketFragment : Fragment() {
     private var _binding: FragmentTicketBinding? = null
     private val binding: FragmentTicketBinding
         get() = requireNotNull(_binding) { "FragmentTicketBinding" }
-    private val information =
-//        arrayListOf(getString(R.string.ticket_verify), getString(R.string.ticket_pass) (???)
-        arrayListOf("승차권", "정기권⋅패스")
+    private val information: Array<String>
+        get() = resources.getStringArray(R.array.ticket_array)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,11 +31,15 @@ class TicketFragment : Fragment() {
     }
 
     private fun setViewPager() {
-        val adapter = TicketVPAdapter(this)
-        binding.vpTicketVerifyViewpager.apply{
-            adapter = adapter
+        val ticketAdapter = TicketVPAdapter(this)
+        binding.vpTicketVerifyViewpager.apply {
+            adapter = ticketAdapter
             isUserInputEnabled = false
         }
+        setTabLayout()
+    }
+
+    private fun setTabLayout() {
         TabLayoutMediator(
             binding.tlTicketTablayout,
             binding.vpTicketVerifyViewpager
