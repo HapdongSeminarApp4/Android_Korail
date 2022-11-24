@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.information.InformationActivity">
+
+        <include
+            android:id="@+id/include_information_tool_bar"
+            layout="@layout/include_information_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_information_pages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/fl_information_btn"
+            app:layout_constraintTop_toBottomOf="@+id/include_information_tool_bar"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <FrameLayout
+            android:id="@+id/fl_information_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_information_page_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:paddingHorizontal="25dp">
+
+                <ImageButton
+                    android:id="@+id/ib_prev_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_blue_fill_oval"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="15dp"
+                    android:src="@drawable/ic_information_left" />
+
+                <TextView
+                    android:id="@+id/tv_current_page"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAppearance="@style/B6"
+                    android:textColor="@color/blue"
+                    tools:text="1/5" />
+
+                <ImageButton
+                    android:id="@+id/ib_next_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_blue_fill_oval"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="12dp"
+                    android:src="@drawable/ic_information_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_information_agree_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:paddingHorizontal="35dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_light_red_fill_10_rect"
+                    android:paddingHorizontal="48dp"
+                    android:paddingVertical="17dp"
+                    android:text="@string/information_disagree_btn"
+                    android:textAppearance="@style/H4"
+                    android:textColor="@color/gray_11" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_disagree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_light_blue_fill_10_rect"
+                    android:paddingHorizontal="55dp"
+                    android:paddingVertical="17dp"
+                    android:text="@string/information_agree_btn"
+                    android:textAppearance="@style/H4"
+                    android:textColor="@color/gray_11" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -4,6 +4,7 @@
     package="com.example.korail_aos">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".KorailApplication"
         android:allowBackup="true"
@@ -15,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KorailAOS"
         tools:targetApi="31">
+        <activity
+            android:name=".presentation.information.InformationActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
