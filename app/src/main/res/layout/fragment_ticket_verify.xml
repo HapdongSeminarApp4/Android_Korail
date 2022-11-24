@@ -166,7 +166,7 @@
                 android:paddingBottom="10dp"
                 android:text="@string/ticket_verify_warning"
                 android:textAppearance="@style/B2"
-                android:textColor="@color/gray_10"
+                android:textColor="@color/gray_09"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_date" />
         </androidx.constraintlayout.widget.ConstraintLayout>
