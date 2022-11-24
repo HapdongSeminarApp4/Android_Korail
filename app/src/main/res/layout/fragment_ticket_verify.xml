@@ -97,7 +97,7 @@
                 android:layout_marginTop="11dp"
                 android:text="홍서현"
                 android:textAppearance="@style/H1"
-                android:textColor="@color/gray_11"
+                android:textColor="@color/gray_12"
                 app:layout_constraintStart_toStartOf="@id/tv_ticket_verify_end_date"
                 app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_user_title" />
 
@@ -108,7 +108,7 @@
                 android:layout_marginTop="4dp"
                 android:text="여 ㅣ 2002년 02월 12일"
                 android:textAppearance="@style/B8"
-                android:textColor="@color/gray_11"
+                android:textColor="@color/gray_12"
                 app:layout_constraintStart_toStartOf="@id/tv_ticket_verify_end_date"
                 app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_user_name" />
 
