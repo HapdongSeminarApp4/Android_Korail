@@ -3,79 +3,79 @@
 
     <style name="H1">
         <item name="android:fontFamily">@font/pretendard_semi_bold</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">24dp</item>
         <item name="android:lineSpacingExtra">29sp</item>
     </style>
 
     <style name="H2">
         <item name="android:fontFamily">@font/pretendard_semi_bold</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">22dp</item>
         <item name="android:lineSpacingExtra">26sp</item>
     </style>
 
     <style name="H3">
         <item name="android:fontFamily">@font/pretendard_bold</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:lineSpacingExtra">24sp</item>
     </style>
 
     <style name="H4">
         <item name="android:fontFamily">@font/pretendard_semi_bold</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:lineSpacingExtra">19sp</item>
     </style>
 
     <style name="B5">
         <item name="android:fontFamily">@font/pretendard_bold</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">22dp</item>
         <item name="android:lineSpacingExtra">26sp</item>
     </style>
 
     <style name="B3">
         <item name="android:fontFamily">@font/pretendard_semi_bold</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:lineSpacingExtra">24sp</item>
     </style>
 
     <style name="B7">
         <item name="android:fontFamily">@font/pretendard_medium</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:lineSpacingExtra">24sp</item>
     </style>
 
     <style name="B6">
         <item name="android:fontFamily">@font/pretendard_semi_bold</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">18dp</item>
         <item name="android:lineSpacingExtra">24sp</item>
     </style>
 
     <style name="B8">
         <item name="android:fontFamily">@font/pretendard_medium</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:lineSpacingExtra">19sp</item>
     </style>
 
     <style name="B2">
         <item name="android:fontFamily">@font/pretendard_medium</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:lineSpacingExtra">17sp</item>
     </style>
 
     <style name="B1">
         <item name="android:fontFamily">@font/pretendard_semi_bold</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">14dp</item>
         <item name="android:lineSpacingExtra">17sp</item>
     </style>
 
     <style name="B9">
         <item name="android:fontFamily">@font/pretendard_medium</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">12dp</item>
         <item name="android:lineSpacingExtra">14sp</item>
     </style>
 
     <style name="B10">
         <item name="android:fontFamily">@font/pretendard_medium</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">10dp</item>
         <item name="android:lineSpacingExtra">12sp</item>
     </style>
 </resources>
