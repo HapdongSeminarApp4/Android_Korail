@@ -19,22 +19,18 @@ data class ResponseUserTicketDTO(
         @SerialName("ticketId")
         val ticketId: Int,
         @SerialName("startDate")
-        @Contextual
-        val startDate: Date,
+        val startDate: String,
         @SerialName("endDate")
-        @Contextual
-        val endDate: Date,
+        val endDate: String,
         @SerialName("name")
         val name: String,
         @SerialName("gender")
         val gender: String,
         @SerialName("birth")
-        @Contextual
-        val birth: Date,
+        val birth: String,
         @SerialName("ticketNum")
         val ticketNum: String,
         @SerialName("currentDate")
-        @Contextual
-        val currentDate: Date
+        val currentDate: String
     )
 }
