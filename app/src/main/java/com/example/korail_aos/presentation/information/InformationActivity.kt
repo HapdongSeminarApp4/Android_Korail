@@ -2,17 +2,25 @@ package com.example.korail_aos.presentation.information
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.example.korail_aos.MainActivity
 import com.example.korail_aos.R
+import com.example.korail_aos.data.entity.request.TicketRequest
+import com.example.korail_aos.data.service.KorailService
 import com.example.korail_aos.databinding.ActivityInformationBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class InformationActivity : AppCompatActivity() {
+    @Inject
+    lateinit var korailService: KorailService
     private lateinit var binding: ActivityInformationBinding
     private lateinit var informationAdapter: InformationAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,14 +72,25 @@ class InformationActivity : AppCompatActivity() {
 
     private fun initAgreeBtnOnClick() {
         binding.btnAgree.setOnClickListener {
-            /* 서버 post 작업 */
-            Intent(this, MainActivity::class.java)
-                .apply { putExtra("moveTicket", true) }
-                .also { intent ->
-                    startActivity(intent)
-                    finishAffinity()
-                }
+            postTicket()
         }
+    }
+
+    private fun postTicket() {
+        lifecycleScope.launch {
+            runCatching { korailService.postTicket(TicketRequest(1, 2, "5A", 5)) }
+                .onSuccess { moveMainActivity() }
+                .onFailure { Log.e(TAG, "error : ${it.message}") }
+        }
+    }
+
+    private fun moveMainActivity() {
+        Intent(this, MainActivity::class.java)
+            .apply { putExtra("moveTicket", true) }
+            .also { intent ->
+                startActivity(intent)
+                finishAffinity()
+            }
     }
 
     private fun initBackBtnOnClick() {
@@ -81,6 +100,7 @@ class InformationActivity : AppCompatActivity() {
     companion object {
         private val dummy =
             listOf(Information(0), Information(1), Information(2), Information(3), Information(4))
+        private const val TAG = "InformationActivity"
     }
 }
 
