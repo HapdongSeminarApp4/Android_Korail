@@ -21,7 +21,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TrainFragment : Fragment() {
     private var _binding: FragmentTrainBinding? = null
     private val binding: FragmentTrainBinding
