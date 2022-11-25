@@ -28,14 +28,14 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-#     - name: Create Local Properties
-#       run: touch local.properties
+    - name: Create Local Properties   
+      run: touch local.properties
       
-#     - name: Access Local Properties
-#       env:
-#         KORAIL_URI: ${{ secrets.BASE_URL }}
-#       run: |
-#         echo KORAIL_URI=\"$BASE_URL\" >> local.properties
+    - name: Access Local Properties
+      env:
+        BASE_URL: ${{ secrets.BASE_URL }}
+      run: |
+        echo BASE_URL=\"$BASE_URL\" >> local.properties
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew

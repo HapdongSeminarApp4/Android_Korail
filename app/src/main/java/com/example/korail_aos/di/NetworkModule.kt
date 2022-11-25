@@ -1,6 +1,7 @@
 package com.example.korail_aos.di
 
 import androidx.databinding.ktx.BuildConfig
+import com.example.korail_aos.BuildConfig.BASE_URL
 import com.example.korail_aos.data.service.KorailService
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
@@ -57,7 +58,7 @@ object NetworkModule {
     @Singleton
     fun providesKorailRetrofit(okHttpClient: OkHttpClient): Retrofit =
         Retrofit.Builder()
-            .baseUrl("BASE_URL")
+            .baseUrl(BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
             .build()
