@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.korail_aos.data.entity.response.ResponseUserTicketDTO
+import com.example.korail_aos.data.entity.response.ResponseUserTicketDto
 import com.example.korail_aos.data.service.KorailService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
@@ -16,16 +16,16 @@ import javax.inject.Inject
 class TicketVerifyViewModel @Inject constructor(
     private var korailService: KorailService
 ) : ViewModel() {
-    private val _getTicketResult: MutableLiveData<ResponseUserTicketDTO> = MutableLiveData()
-    val getTicketResult: LiveData<ResponseUserTicketDTO> = _getTicketResult
+    private val _getTicketResult: MutableLiveData<ResponseUserTicketDto> = MutableLiveData()
+    val getTicketResult: LiveData<ResponseUserTicketDto> = _getTicketResult
     private val _successGetTicket: MutableLiveData<Boolean> = MutableLiveData()
     val successGetTicket: LiveData<Boolean> = _successGetTicket
 
     fun getTicket(userId: Int) {
-        korailService.getUserTicket(userId).enqueue(object : Callback<ResponseUserTicketDTO> {
+        korailService.getUserTicket(userId).enqueue(object : Callback<ResponseUserTicketDto> {
             override fun onResponse(
-                call: Call<ResponseUserTicketDTO>,
-                response: Response<ResponseUserTicketDTO>
+                call: Call<ResponseUserTicketDto>,
+                response: Response<ResponseUserTicketDto>
             ) {
                 if (response.isSuccessful) {
                     _getTicketResult.value = response.body()
@@ -37,7 +37,7 @@ class TicketVerifyViewModel @Inject constructor(
                 }
             }
 
-            override fun onFailure(call: Call<ResponseUserTicketDTO>, t: Throwable) {
+            override fun onFailure(call: Call<ResponseUserTicketDto>, t: Throwable) {
                 _successGetTicket.value = false
                 Log.d("TEST", "서버 통신 실패, $t")
             }
