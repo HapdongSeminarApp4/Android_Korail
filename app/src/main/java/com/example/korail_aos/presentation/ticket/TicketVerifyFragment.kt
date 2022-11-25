@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.korail_aos.R
 import com.example.korail_aos.databinding.FragmentTicketVerifyBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class TicketVerifyFragment : Fragment() {
     private var _binding: FragmentTicketVerifyBinding? = null
@@ -34,14 +37,26 @@ class TicketVerifyFragment : Fragment() {
             if (success) {
                 val result = viewModel.getTicketResult.value!!.data[0]
                 with(binding) {
-                    tvTicketVerifyStartDate.text = result.startDate
-                    tvTicketVerifyEndDate.text = result.endDate
+                    tvTicketVerifyStartDate.text = changeDateFormat(result.startDate, 0).toString()
+                    tvTicketVerifyEndDate.text = changeDateFormat(result.endDate, 0).toString()
                     tvTicketVerifyUserName.text = result.name
-                    tvTicketVerifyUserInfo.text = result.gender + result.birth
+                    tvTicketVerifyUserInfo.text = String.format(
+                        getString(R.string.ticket_verify_user_info_content),
+                        result.gender,
+                        changeDateFormat(result.birth, 1)
+                    )
                     tvTicketVerifyTicketNumContent.text = result.ticketNum
-                    tvTicketVerifyDate.text = result.currentDate
+                    tvTicketVerifyDate.text = changeDateFormat(result.currentDate, 2).toString()
                 }
             }
+        }
+    }
+
+    private fun changeDateFormat(date: Date, type: Int) {
+        when (type) {
+            0 -> SimpleDateFormat("yyyy년 MM월 dd일 (E)", Locale("ko", "KR")).format(date)
+            1 -> SimpleDateFormat("yyyy년 MM월 dd일", Locale("ko", "KR")).format(date)
+            else -> SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale("ko", "KR")).format(date)
         }
     }
 

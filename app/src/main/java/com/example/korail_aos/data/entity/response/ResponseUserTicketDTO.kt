@@ -1,7 +1,9 @@
 package com.example.korail_aos.data.entity.response
 
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import java.util.Date
 
 @Serializable
 data class ResponseUserTicketDTO(
@@ -17,18 +19,22 @@ data class ResponseUserTicketDTO(
         @SerialName("ticketId")
         val ticketId: Int,
         @SerialName("startDate")
-        val startDate: String,
+        @Contextual
+        val startDate: Date,
         @SerialName("endDate")
-        val endDate: String,
+        @Contextual
+        val endDate: Date,
         @SerialName("name")
         val name: String,
         @SerialName("gender")
         val gender: String,
         @SerialName("birth")
-        val birth: String,
+        @Contextual
+        val birth: Date,
         @SerialName("ticketNum")
         val ticketNum: String,
         @SerialName("currentDate")
-        val currentDate: String
+        @Contextual
+        val currentDate: Date
     )
 }

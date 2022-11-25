@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.korail_aos.R
-import dagger.hilt.android.AndroidEntryPoint
 import com.example.korail_aos.databinding.FragmentTicketBinding
 import com.google.android.material.tabs.TabLayoutMediator
 import dagger.hilt.android.AndroidEntryPoint
