@@ -17,6 +17,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         initBottomNavigationView()
+        moveTicketScreen()
+    }
+
+    private fun moveTicketScreen() {
+        val isMove = intent.getBooleanExtra("moveTicket", false)
+        if (isMove) binding.botNavMain.selectedItemId = R.id.ticketFragment
     }
 
     private fun initBottomNavigationView() {
