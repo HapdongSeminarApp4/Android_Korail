@@ -6,7 +6,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.viewpager2.widget.ViewPager2
 import com.example.korail_aos.R
 import com.example.korail_aos.databinding.ActivityInformationBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class InformationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityInformationBinding
     private lateinit var informationAdapter: InformationAdapter
