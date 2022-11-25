@@ -2,6 +2,7 @@ package com.example.korail_aos.data.service
 
 import com.example.korail_aos.data.entity.request.TicketRequest
 import com.example.korail_aos.data.entity.response.ResponseUserTicketDto
+import com.example.korail_aos.remote.ResponseMainDto
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -13,6 +14,9 @@ interface KorailService {
     suspend fun postTicket(
         @Body body: TicketRequest
     )
+
+    @GET("/api/ticket")
+    fun getTicket(): Call<ResponseMainDto>
 
     @GET("api/ticket/user/{userId}")
     fun getUserTicket(

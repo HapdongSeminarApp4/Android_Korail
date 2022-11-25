@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:title="공지사항"
+            android:icon="@drawable/ic_main_unfold"/>
+        <item android:title="고객센터"
+            android:icon="@drawable/ic_main_unfold"/>
+        <item android:title="철도범죄신고"
+            android:icon="@drawable/ic_main_unfold"/>
+        <item android:title="KTX 특송"
+            android:icon="@drawable/ic_main_unfold"/>
+        <item android:title="설정"
+            android:icon="@drawable/ic_main_unfold"/>
+    </group>
+
+</menu>
