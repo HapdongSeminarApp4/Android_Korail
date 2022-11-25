@@ -21,7 +21,7 @@ class TrainFragment : Fragment() {
     private val binding: FragmentTrainBinding
         get() = requireNotNull(_binding) { "FragmentTrainBinding" }
     @Inject
-    lateinit var KorailService: KorailService
+    lateinit var korailService: KorailService
 
     fun onBind(data: ResponseMainDto.Data) {
         binding.tvFrom.text = data.from
@@ -50,7 +50,7 @@ class TrainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        KorailService.getTicket().enqueue(object : Callback<ResponseMainDto> {
+        korailService.getTicket().enqueue(object : Callback<ResponseMainDto> {
             override fun onResponse(
                 call: Call<ResponseMainDto>,
                 response: Response<ResponseMainDto>
