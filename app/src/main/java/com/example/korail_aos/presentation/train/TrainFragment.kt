@@ -1,18 +1,18 @@
 package com.example.korail_aos.presentation.train
 
-import androidx.drawerlayout.widget.DrawerLayout
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.example.korail_aos.R
 import com.example.korail_aos.data.service.KorailService
 import com.example.korail_aos.databinding.FragmentTrainBinding
 import com.example.korail_aos.remote.ResponseMainDto
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -20,6 +20,7 @@ class TrainFragment : Fragment() {
     private var _binding: FragmentTrainBinding? = null
     private val binding: FragmentTrainBinding
         get() = requireNotNull(_binding) { "FragmentTrainBinding" }
+
     @Inject
     lateinit var korailService: KorailService
 
@@ -59,6 +60,7 @@ class TrainFragment : Fragment() {
                     onBind(response.body()!!.data[0])
                 }
             }
+
             override fun onFailure(call: Call<ResponseMainDto>, t: Throwable) {
                 Toast.makeText(requireContext(), "에러 발생", Toast.LENGTH_SHORT).show()
             }
@@ -75,6 +77,7 @@ class TrainFragment : Fragment() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
