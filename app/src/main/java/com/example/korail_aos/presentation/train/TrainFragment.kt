@@ -1,39 +1,32 @@
 package com.example.korail_aos.presentation.train
 
-import android.app.ActionBar
-import android.content.Intent
+import androidx.drawerlayout.widget.DrawerLayout
 import android.os.Bundle
 import android.view.*
-import android.widget.Toolbar
-import androidx.core.view.GravityCompat
-import androidx.databinding.DataBindingUtil.setContentView
-import androidx.drawerlayout.widget.DrawerLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import com.example.korail_aos.R
+import com.example.korail_aos.data.service.KorailService
 import com.example.korail_aos.databinding.FragmentTrainBinding
-import com.example.korail_aos.remote.MainAdapter
-import com.example.korail_aos.remote.MainService
-import com.example.korail_aos.remote.MainServicePool
-import com.example.korail_aos.remote.ResponseMainDTO
+import com.example.korail_aos.remote.ResponseMainDto
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import javax.inject.Inject
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class TrainFragment : Fragment() {
     private var _binding: FragmentTrainBinding? = null
     private val binding: FragmentTrainBinding
-        get() = _binding!!
+    get() = requireNotNull(_binding) { "FragmentTrainBinding" }
+    lateinit var KorailService: KorailService
+    private val korailService = KorailService
 
-    @Inject
-    lateinit var MainService: MainService
-    private val mainService = MainServicePool.mainService
-    private lateinit var mainAdapter: MainAdapter
-    var isDrawerOpen = false
+    fun onBind(data: ResponseMainDto.Data) {
+        binding.tvFrom.text = data.from
+        binding.tvTo.text = data.to
+        binding.tvDate.text = data.date
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,25 +41,39 @@ class TrainFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         _binding = FragmentTrainBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        KorailService.getTicket().enqueue(object : Callback<ResponseMainDto> {
+            override fun onResponse(
+                call: Call<ResponseMainDto>,
+                response: Response<ResponseMainDto>
+            ) {
+                if (response.isSuccessful) { // response의 status code가 200~299 사이의
+                    onBind(response.body()!!.data[0])
+                }
+            }
+            override fun onFailure(call: Call<ResponseMainDto>, t: Throwable) {
+                Toast.makeText(requireContext(), "에러 발생", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.btn_toolbar_drawer -> {
-               //drawer 열기
+                binding.navMainDrawer.openDrawer(Gravity.RIGHT)
+                binding.navMainDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
