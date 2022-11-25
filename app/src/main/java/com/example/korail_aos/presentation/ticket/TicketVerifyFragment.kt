@@ -50,6 +50,17 @@ class TicketVerifyFragment : Fragment() {
                 tvTicketVerifyTicketNumContent.text = result.ticketNum
                 tvTicketVerifyDate.text = changeDateFormat(result.currentDate, DATE_TIME)
             }
+            setView()
+        }
+    }
+
+    private fun setView() {
+        if (viewModel.isEmpty.value == true) {
+            binding.cvTicketVerify.visibility = View.GONE
+            binding.clTicketEmpty.visibility = View.VISIBLE
+        } else {
+            binding.cvTicketVerify.visibility = View.VISIBLE
+            binding.clTicketEmpty.visibility = View.GONE
         }
     }
 

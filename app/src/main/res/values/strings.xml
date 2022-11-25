@@ -36,6 +36,7 @@
     <string name="ticket_verify_user_info">탑승자 정보</string>
     <string name="ticket_verify_ticket_num">승차권 번호</string>
     <string name="ticket_verify_warning">*캡쳐한 승차권은 부가운임 대상입니다.</string>
+    <string name="ticket_verify_empty">예매하신 승차권이 없습니다.</string>
     <string-array name="ticket_array">
         <item>승차권</item>
         <item>정기권⋅패스</item>

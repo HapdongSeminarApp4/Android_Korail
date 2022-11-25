@@ -8,10 +8,12 @@
     tools:context=".presentation.ticket.TicketVerifyFragment">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_ticket_verify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="21dp"
+        android:visibility="gone"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,10 +42,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="22dp"
-                tools:text="2022년 11월 5일 (수)"
                 android:textAppearance="@style/H3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_title"
+                tools:text="2022년 11월 5일 (수)" />
 
             <TextView
                 android:id="@+id/tv_ticket_verify_from"
@@ -62,11 +64,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="22dp"
                 android:layout_marginTop="12dp"
-                tools:text="2022년 11월 12일 (수)"
                 android:textAppearance="@style/H3"
                 android:textColor="@color/blue"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_start_date" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_start_date"
+                tools:text="2022년 11월 12일 (수)" />
 
             <TextView
                 android:id="@+id/tv_ticket_verify_to"
@@ -95,22 +97,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp"
-                tools:text="홍서현"
                 android:textAppearance="@style/H1"
                 android:textColor="@color/gray_12"
                 app:layout_constraintStart_toStartOf="@id/tv_ticket_verify_end_date"
-                app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_user_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_user_title"
+                tools:text="홍서현" />
 
             <TextView
                 android:id="@+id/tv_ticket_verify_user_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                tools:text="여 ㅣ 2002년 02월 12일"
                 android:textAppearance="@style/B8"
                 android:textColor="@color/gray_12"
                 app:layout_constraintStart_toStartOf="@id/tv_ticket_verify_end_date"
-                app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_user_name" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_user_name"
+                tools:text="여 ㅣ 2002년 02월 12일" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -137,12 +139,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="17dp"
-                tools:text="82211-0827-10827-87 "
                 android:textAppearance="@style/B2"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_ticket_verify_ticket_num_title"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tv_ticket_verify_ticket_num_title" />
+                app:layout_constraintTop_toTopOf="@id/tv_ticket_verify_ticket_num_title"
+                tools:text="82211-0827-10827-87 " />
 
             <TextView
                 android:id="@+id/tv_ticket_verify_date"
@@ -152,10 +154,10 @@
                 android:background="@color/light_blue"
                 android:gravity="center"
                 android:paddingVertical="5dp"
-                tools:text="2022-11-8  15:20:08"
                 android:textAppearance="@style/H4"
                 android:textColor="@color/blue"
-                app:layout_constraintTop_toBottomOf="@id/tv_ticket_verify_ticket_num_title" />
+                app:layout_constraintTop_toBottomOf="@id/tv_ticket_verify_ticket_num_title"
+                tools:text="2022-11-8  15:20:08" />
 
             <TextView
                 android:id="@+id/tv_ticket_verify_warning"
@@ -171,5 +173,33 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_ticket_verify_date" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_ticket_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_ticket_empty_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="113dp"
+            android:src="@drawable/ic_ticket_empty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_ticket_empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ticket_verify_empty"
+            android:textAppearance="@style/B3"
+            android:textColor="@color/gray_09"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_ticket_empty_img" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

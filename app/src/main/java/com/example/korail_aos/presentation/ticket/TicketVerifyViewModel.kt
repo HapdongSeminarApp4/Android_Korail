@@ -18,8 +18,8 @@ class TicketVerifyViewModel @Inject constructor(
 ) : ViewModel() {
     private val _getTicketResult: MutableLiveData<ResponseUserTicketDto> = MutableLiveData()
     val getTicketResult: LiveData<ResponseUserTicketDto> = _getTicketResult
-    private val _successGetTicket: MutableLiveData<Boolean> = MutableLiveData()
-    val successGetTicket: LiveData<Boolean> = _successGetTicket
+    private val _isEmpty: MutableLiveData<Boolean> = MutableLiveData()
+    val isEmpty: LiveData<Boolean> = _isEmpty
 
     fun getTicket(userId: Int) {
         korailService.getUserTicket(userId).enqueue(object : Callback<ResponseUserTicketDto> {
@@ -29,16 +29,16 @@ class TicketVerifyViewModel @Inject constructor(
             ) {
                 if (response.isSuccessful) {
                     _getTicketResult.value = response.body()
-                    _successGetTicket.value = true
+                    _isEmpty.value = false
                     Log.d("TEST", "getUserTicket 성공, ${response.message()}")
                 } else {
                     Log.d("TEST", "getUserTicket 실패, ${response.message()}")
-                    _successGetTicket.value = false
+                    _isEmpty.value = true
                 }
             }
 
             override fun onFailure(call: Call<ResponseUserTicketDto>, t: Throwable) {
-                _successGetTicket.value = false
+                _isEmpty.value = true
                 Log.d("TEST", "서버 통신 실패, $t")
             }
         })
