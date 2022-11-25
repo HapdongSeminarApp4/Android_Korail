@@ -34,10 +34,9 @@
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="58dp"
                 android:layout_marginBottom="21dp"
-                android:fontFamily="@font/pretendard_semi_bold"
-                android:text="승차권 예매"
+                android:text="@string/main_title"
                 android:textColor="@color/white"
-                android:textSize="24dp" />
+                android:textAppearance="@style/H1" />
 <!--            <ImageButton-->
 <!--                android:layout_width="wrap_content"-->
 <!--                android:layout_height="wrap_content"-->
@@ -59,8 +58,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/pretendard_semi_bold"
-                android:text="내일로 두번째 이야기" />
+                android:textAppearance="@style/B1"
+                android:text="@string/main_semiTitle" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -95,8 +94,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="80dp"
                     android:layout_marginTop="30dp"
-                    android:fontFamily="@font/pretendard_semi_bold"
-                    android:text="출발" />
+                    android:text="@string/main_from"
+                    android:textAppearance="@style/B1" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -110,8 +109,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="84dp"
                     android:layout_marginTop="30dp"
-                    android:fontFamily="@font/pretendard_semi_bold"
-                    android:text="도착" />
+                    android:textAppearance="@style/B1"
+                    android:text="@string/main_to" />
             </LinearLayout>
 
             <LinearLayout
@@ -125,10 +124,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="70dp"
                     android:layout_marginTop="21dp"
-                    android:fontFamily="@font/pretendard_bold"
+                    android:textAppearance="@style/H1"
                     tools:text="서울"
-                    android:textColor="@color/blue"
-                    android:textSize="24dp" />
+                    android:textColor="@color/blue" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -143,10 +141,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="84dp"
                     android:layout_marginTop="21dp"
-                    android:fontFamily="@font/pretendard_bold"
+                    android:textAppearance="@style/H1"
                     tools:text="부산"
-                    android:textColor="@color/blue"
-                    android:textSize="24dp" />
+                    android:textColor="@color/blue" />
             </LinearLayout>
         </LinearLayout>
 
@@ -163,7 +160,7 @@
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/iv_main_line2">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -173,10 +170,10 @@
                 android:drawablePadding="-70dp"
                 android:drawableStart="@drawable/ic_main_right_arrow"
                 android:background="@color/white"
-                android:fontFamily="@font/pretendard_bold"
-                android:text="편도" />
+                android:textAppearance="@style/B1"
+                android:text="@string/main_oneWay" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -184,8 +181,8 @@
                 android:drawablePadding="-70dp"
                 android:drawableStart="@drawable/ic_main_shuffle"
                 android:background="@color/gray_04"
-                android:fontFamily="@font/pretendard_semi_bold"
-                android:text="왕복" />
+                android:textAppearance="@style/B1"
+                android:text="@string/main_mutual" />
         </LinearLayout>
 
         <ImageView
@@ -215,9 +212,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/pretendard_semi_bold"
-                android:text="사용기간"
-                android:textSize="14dp" />
+                android:textAppearance="@style/B1"
+                android:text="@string/main_due" />
 
             <TextView
                 android:id="@+id/tv_date"
@@ -225,9 +221,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/pretendard_bold"
-                tools:text="2022년 11월 5일 (토), 7일 사용"
-                android:textSize="14dp" />
+                android:textAppearance="@style/B1"
+                tools:text="2022년 11월 5일 (토), 7일 사용" />
         </LinearLayout>
 
         <ImageView
@@ -257,18 +252,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/pretendard_semi_bold"
-                android:text="승객 연령 및 좌석수"
-                android:textSize="14dp" />
+                android:textAppearance="@style/B1"
+                android:text="@string/main_passenger" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="176dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/pretendard_bold"
-                android:text="어른 1명"
-                android:textSize="14dp" />
+                android:textAppearance="@style/B1"
+                android:text="@string/main_person" />
         </LinearLayout>
 
         <ImageView
@@ -298,18 +291,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/pretendard_semi_bold"
-                android:text="결제 수단"
-                android:textSize="14dp" />
+                android:textAppearance="@style/B1"
+                android:text="@string/main_pay" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="232dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/pretendard_bold"
-                android:text="신한카드"
-                android:textSize="14dp" />
+                android:textAppearance="@style/B1"
+                android:text="@string/main_card" />
         </LinearLayout>
 
         <ImageView
@@ -325,7 +316,7 @@
             android:layout_height="60dp"
             android:background="@color/light_blue"
             android:fontFamily="@font/pretendard_bold"
-            android:text="예매하기"
+            android:text="@string/main_book"
             android:textColor="@color/blue"
             android:textSize="22dp"
             app:layout_constraintBottom_toBottomOf="parent" />

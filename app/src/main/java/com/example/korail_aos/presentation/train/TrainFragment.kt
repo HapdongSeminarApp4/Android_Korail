@@ -13,14 +13,15 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class TrainFragment : Fragment() {
     private var _binding: FragmentTrainBinding? = null
     private val binding: FragmentTrainBinding
-    get() = requireNotNull(_binding) { "FragmentTrainBinding" }
+        get() = requireNotNull(_binding) { "FragmentTrainBinding" }
+    @Inject
     lateinit var KorailService: KorailService
-    private val korailService = KorailService
 
     fun onBind(data: ResponseMainDto.Data) {
         binding.tvFrom.text = data.from

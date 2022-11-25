@@ -15,10 +15,9 @@
             android:layout_marginTop="58dp"
             android:layout_marginStart="150dp"
             android:layout_marginBottom="21dp"
-            android:fontFamily="@font/pretendard_semi_bold"
             android:text="승차권 예매"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textAppearance="@style/H1"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

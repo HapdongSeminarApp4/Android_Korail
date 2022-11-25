@@ -1,4 +1,32 @@
 <resources>
+    <string name="drawer_name">홍서현</string>
+    <string name="drawer_user">고객님!</string>
+    <string name="drawer_notice">공지사항</string>
+    <string name="drawer_center">고객센터</string>
+    <string name="drawer_police">철도범죄신고</string>
+    <string name="drawer_ktx">KTX 특송</string>
+    <string name="drawer_setting">설정</string>
+    <string name="drawer_text5">대표 나희승, 대전광역시 동구 중앙로 240</string>
+    <string name="drawer_text1">사업자등록번호 314-82-10024</string>
+    <string name="drawer_text2">통신판매업신고 대전동구-0233호</string>
+    <string name="drawer_text3">고객센터 1544-7788</string>
+    <string name="drawer_text4">개인정보처리방침 | 여객 운송약관                                                                  한국철도공사</string>
+
+    <string name="main_title">승차권 예매</string>
+    <string name="main_semiTitle">내일로 두번째 이야기</string>
+    <string name="main_from">출발</string>
+    <string name="main_to">도착</string>
+    <string name="main_oneWay">편도</string>
+    <string name="main_mutual">왕복</string>
+    <string name="main_fromStation">서울</string>
+    <string name="main_toStation">부산</string>
+    <string name="main_due">사용기간</string>
+    <string name="main_passenger">승객 연령 및 좌석수</string>
+    <string name="main_person">어른 1명</string>
+    <string name="main_pay">결제수단</string>
+    <string name="main_card">신한카드</string>
+    <string name="main_book">예매하기</string>
+
     <string name="app_name">Korail-AOS</string>
     <string name="bottom_train">승차권예매</string>
     <string name="bottom_discount">할인⋅정기권</string>
@@ -37,6 +65,7 @@
     <string name="ticket_verify_ticket_num">승차권 번호</string>
     <string name="ticket_verify_warning">*캡쳐한 승차권은 부가운임 대상입니다.</string>
     <string-array name = "ticket_array">
+
         <item>승차권</item>
         <item>정기권⋅패스</item>
     </string-array>
