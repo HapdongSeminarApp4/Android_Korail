@@ -1,11 +1,12 @@
 package com.example.korail_aos.data.service
 
-import com.example.korail_aos.data.entity.response.ResponseUserTicketDTO
-import retrofit2.Call
-import retrofit2.http.Path
+import com.example.korail_aos.data.entity.request.TicketRequest
+import retrofit2.http.Body
+import retrofit2.http.POST
 
 interface KorailService {
-    fun getUserTicket(
-        @Path("userId") userId: Int
-    ): Call<ResponseUserTicketDTO>
+    @POST("api/ticket")
+    suspend fun postTicket(
+        @Body body: TicketRequest
+    )
 }

@@ -79,7 +79,7 @@
                 android:visibility="gone">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_agree"
+                    android:id="@+id/btn_disagree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_light_red_fill_10_rect"
@@ -95,7 +95,7 @@
                     android:layout_weight="1" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_disagree"
+                    android:id="@+id/btn_agree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_light_blue_fill_10_rect"
