@@ -1,6 +1,5 @@
 package com.example.korail_aos.di
 
-import androidx.databinding.ktx.BuildConfig
 import com.example.korail_aos.BuildConfig.BASE_URL
 import com.example.korail_aos.data.service.KorailService
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
