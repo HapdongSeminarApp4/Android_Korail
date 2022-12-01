@@ -15,6 +15,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.time.Instant
+import java.util.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -58,6 +61,8 @@ class TrainFragment : Fragment() {
             ) {
                 if (response.isSuccessful) { // response의 status code가 200~299 사이의
                     onBind(response.body()!!.data)
+                    val result = response.body()!!.data
+                    binding.tvDate.text = changeDateFormat(result.date, TrainFragment.DATE_DOW)
                 }
             }
 
@@ -75,6 +80,15 @@ class TrainFragment : Fragment() {
             startActivity(intent)
         }
     }
+    private fun changeDateFormat(date: String, type: Int): String {
+        val timestamp = Instant.parse(date)
+        val dateString = Date.from(timestamp)
+
+        return when (type) {
+            TrainFragment.DATE_DOW -> SimpleDateFormat("yyyy년 MM월 dd일 (E)", Locale("ko", "KR")).format(dateString)
+            else -> SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale("ko", "KR")).format(dateString)
+        }
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
@@ -90,5 +104,8 @@ class TrainFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+    companion object {
+        private const val DATE_DOW = 0
     }
 }
