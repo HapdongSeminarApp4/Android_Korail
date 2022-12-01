@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/gray_04"
-        tools:context=".MainActivity">
+        tools:context=".presentaion.train.TrainFragment">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/tb_main"
@@ -26,8 +26,8 @@
             app:layout_constraintBottom_toTopOf="@+id/layout_main_semi_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:menu="@menu/menu_main_toolbar">
+            app:layout_constraintTop_toTopOf="parent">
+<!--            app:menu="@menu/menu_main_toolbar">-->
 
             <TextView
                 android:layout_width="110dp"
@@ -38,12 +38,13 @@
                 android:text="@string/main_title"
                 android:textAppearance="@style/H1"
                 android:textColor="@color/white" />
-            <!--            <ImageButton-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginTop="58dp"-->
-            <!--                android:layout_marginStart="105dp"-->
-            <!--                android:src="@drawable/ic_main_bar"/>-->
+            <ImageView
+                android:id="@+id/btn_drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="61dp"
+                android:layout_marginStart="98dp"
+                android:src="@drawable/ic_main_bar"/>
         </androidx.appcompat.widget.Toolbar>
 
         <LinearLayout
@@ -65,7 +66,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="233dp"
+                android:layout_marginStart="225dp"
                 android:layout_marginTop="18dp"
                 android:src="@drawable/ic_main_unfold" />
         </LinearLayout>
@@ -93,7 +94,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="80dp"
+                    android:layout_marginStart="75dp"
                     android:layout_marginTop="30dp"
                     android:text="@string/main_from"
                     android:textAppearance="@style/B1" />
@@ -101,14 +102,14 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="84dp"
+                    android:layout_marginStart="76dp"
                     android:layout_marginTop="30dp"
                     android:src="@drawable/ic_main_mutal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="84dp"
+                    android:layout_marginStart="79dp"
                     android:layout_marginTop="30dp"
                     android:text="@string/main_to"
                     android:textAppearance="@style/B1" />
@@ -132,7 +133,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="84dp"
+                    android:layout_marginStart="120dp"
                     android:layout_marginTop="32dp"
                     android:src="@drawable/ic_main_right_arrow" />
 
@@ -140,7 +141,7 @@
                     android:id="@+id/tv_to"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="84dp"
+                    android:layout_marginStart="90dp"
                     android:layout_marginTop="21dp"
                     android:textAppearance="@style/H1"
                     android:textColor="@color/blue"
@@ -184,6 +185,7 @@
                 android:drawablePadding="-70dp"
                 android:paddingLeft="70dp"
                 android:text="@string/main_mutual"
+                android:textColor="@color/gray_09"
                 android:textAppearance="@style/B1" />
         </LinearLayout>
 
@@ -260,7 +262,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="176dp"
+                android:layout_marginStart="165dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/main_person"
                 android:textAppearance="@style/B1" />
@@ -299,7 +301,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="232dp"
+                android:layout_marginStart="224dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/main_card"
                 android:textAppearance="@style/B1" />
@@ -312,22 +314,22 @@
             android:src="@drawable/ic_main_line"
             app:layout_constraintTop_toBottomOf="@id/layout_main_pay" />
 
-        <ImageView
-            android:id="@+id/button"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_book"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/light_blue"
             android:fontFamily="@font/pretendard_bold"
             android:text="@string/main_book"
             android:textColor="@color/blue"
-            android:textSize="22dp"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:textAppearance="@style/B5"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_main_drawer_content"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        app:headerLayout="@layout/fragment_main_drawer" />
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:id="@+id/nav_main_drawer_content"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="end"-->
+<!--        app:headerLayout="@layout/activity_main_drawer" />-->
 </androidx.drawerlayout.widget.DrawerLayout>
