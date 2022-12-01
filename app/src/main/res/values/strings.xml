@@ -10,7 +10,7 @@
     <string name="drawer_text1">사업자등록번호 314-82-10024</string>
     <string name="drawer_text2">통신판매업신고 대전동구-0233호</string>
     <string name="drawer_text3">고객센터 1544-7788</string>
-    <string name="drawer_text4">개인정보처리방침 | 여객 운송약관                                                                  한국철도공사</string>
+    <string name="drawer_text4">개인정보처리방침 | 여객 운송약관                                                                            한국철도공사</string>
 
     <string name="main_title">승차권 예매</string>
     <string name="main_semiTitle">내일로 두번째 이야기</string>

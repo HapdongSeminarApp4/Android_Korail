@@ -1,6 +1,5 @@
 package com.example.korail_aos.di
 
-import androidx.databinding.ktx.BuildConfig
 import com.example.korail_aos.BuildConfig.BASE_URL
 import com.example.korail_aos.data.service.KorailService
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
@@ -37,22 +36,18 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun providesOkHttpClient(interceptor: Interceptor): OkHttpClient {
-        val client = OkHttpClient.Builder()
-            .connectTimeout(10, TimeUnit.SECONDS)
-            .writeTimeout(10, TimeUnit.SECONDS)
-            .readTimeout(10, TimeUnit.SECONDS)
+    fun providesKorailOkHttpClient(
+        interceptor: Interceptor
+    ): OkHttpClient =
+        OkHttpClient.Builder()
+            .connectTimeout(15, TimeUnit.SECONDS)
+            .writeTimeout(20, TimeUnit.SECONDS)
+            .readTimeout(15, TimeUnit.SECONDS)
             .addInterceptor(interceptor)
-
-        if (BuildConfig.DEBUG) {
-            client.addInterceptor(
-                HttpLoggingInterceptor().apply {
-                    level = HttpLoggingInterceptor.Level.BODY
-                }
+            .addInterceptor(
+                HttpLoggingInterceptor().also { it.level = HttpLoggingInterceptor.Level.BODY }
             )
-        }
-        return client.build()
-    }
+            .build()
 
     @Provides
     @Singleton
